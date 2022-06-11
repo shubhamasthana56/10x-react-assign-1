@@ -1,0 +1,55 @@
+body {
+    width: 100vw;
+    height: 100vh;
+    margin: 0px;
+}
+.row-1 {
+    height: 20vh ;
+    width: 90vw ;
+    margin: 2vh 2.5vw;
+    display: grid;
+    grid-template: 100% / repeat(2,1fr);
+    column-gap: 2vw;
+
+}
+.row-1 .child {
+    background-color: #ffb702 ;
+}
+
+.row-2 {
+    height: 30vh;
+    width: 90vw;
+    margin: 2vh 2.5vw;
+    background-color: #ef231c;
+}
+.row-3 {
+    height: 30vh;
+    width: 90vw;
+    margin: 2vh 2.5vw;
+    display: grid;
+    grid-template: 100% / repeat(3, 1fr);
+    column-gap: 2vw;
+}
+
+.row-3 .child {
+    background-color: hsl(234, 72%, 64%);
+}
+
+@media  screen and (max-width: 768px) {
+    .row-1 {
+        column-gap: 2.5vmax;
+    }
+    .row-3 {
+        display: grid;
+        grid-template: repeat(2,1fr) / 100%;
+        row-gap: 2.5vmax;
+    }
+}
+
+@media  screen and (max-width: 320px) {
+    .row-1 {
+        display: grid;
+        grid-template: repeat(2,1fr) / 100%;
+        row-gap: 2.5vmax;
+    }
+}
